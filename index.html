@@ -64,25 +64,33 @@
    
     
 </div>
-<center><div class="box" id="bo"></div></center>
+<center><div class="box" id="boxx">
+    <input type="text" id="texts">
+</div></center>
 </div>
 <script>
 var load = document.getElementById("loader");
 window.addEventListener("load", function() {
-    load.style.display = "none";
+load.style.display = "none";
 })
 
-//$(parentselector).on({
-    //'mouseenter': function(){
-           // alert($(this).html()); // .html() or .val() depending on the element
-    //    }
-   // },
-   // targetselector
-//);
 
 
-//ab = document.getElementById("hov").addEventListener("mouseover",moususeOver);
-//{ab.querySelector(".parent").innerHTML = document.getElementById("bo").value;}
+document.getElementById("hov").addEventListener("mouseover", mouseOver);
+document.getElementById("hov").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  document.getElementById("hov").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementById("hov").style.color = "black";
+}
+//const texts = document.querySelectorAll("#hov").mouseover;
+
+    
+console.log(texts);
+
 </script>
 </body>
 </html>
